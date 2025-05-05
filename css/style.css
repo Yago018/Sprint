@@ -1,0 +1,213 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0056b3; 
+    --secondary-color: #003f8a; 
+    --text-color: #333;
+    --light-grey: #f4f4f4;
+    --dark-grey: #555;
+    --white: #fff;
+    --spacing-unit: 20px;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-grey);
+    padding-top: 0;
+}
+
+h1, h2, h3 {
+    color: var(--secondary-color);
+    line-height: 1.2;
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+.site-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-unit);
+}
+
+.site-header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: calc(var(--spacing-unit) * 2) 0;
+    text-align: center;
+    margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.site-title {
+    font-size: 2.8em;
+    margin-bottom: calc(var(--spacing-unit) / 2);
+    color: var(--white); 
+}
+
+.site-subtitle {
+    font-size: 1.3em;
+    opacity: 0.9;
+    color: var(--white); 
+}
+
+section {
+    background-color: var(--white);
+    padding: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 2);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+    font-size: 2em;
+}
+
+section p {
+    text-align: justify;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+}
+
+.mission p,
+.business-model p {
+     text-align: center;
+}
+
+
+.services .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-unit); 
+    margin-top: calc(var(--spacing-unit) * 1.5); 
+}
+
+.services .card {
+    background-color: var(--light-grey);
+    padding: var(--spacing-unit);
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.services .card:hover {
+    transform: translateY(-5px); 
+}
+
+
+.card .icon {
+    font-size: 3.5em; 
+    color: var(--primary-color);
+    margin-bottom: calc(var(--spacing-unit) / 1.5);
+    display: inline-block; 
+    width: 1.5em; 
+    height: 1.5em;
+}
+
+
+.services .card h3 {
+    color: var(--dark-grey);
+    margin-bottom: calc(var(--spacing-unit) / 2);
+    font-size: 1.5em;
+}
+
+.services .card p {
+    font-size: 1em;
+    color: var(--dark-grey);
+    text-align: center; 
+    margin-bottom: 0; 
+}
+
+.contact-btn {
+    text-align: center;
+    margin-top: calc(var(--spacing-unit) * 2);
+    margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.contact-btn button {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-unit) calc(var(--spacing-unit) * 1.5);
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+}
+
+.contact-btn button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px); 
+}
+
+.contact-btn button:active {
+    transform: translateY(0); 
+    background-color: var(--secondary-color); 
+
+}
+.site-footer {
+    text-align: center;
+    padding: var(--spacing-unit) 0;
+    margin-top: calc(var(--spacing-unit) * 2);
+    font-size: 0.9em;
+    color: var(--dark-grey);
+    border-top: 1px solid #ccc;
+}
+
+
+@media (max-width: 768px) {
+    .site-header {
+        padding: var(--spacing-unit) 0;
+    }
+
+    .site-title {
+        font-size: 2em;
+    }
+
+    .site-subtitle {
+        font-size: 1em;
+    }
+
+    section {
+        padding: var(--spacing-unit);
+    }
+
+    section h2 {
+        font-size: 1.8em;
+    }
+
+    .services .card {
+        padding: var(--spacing-unit) * 0.8;
+    }
+
+    .services .card .icon {
+         font-size: 3em;
+         width: 1.2em;
+         height: 1.2em;
+    }
+
+    .services .card h3 {
+        font-size: 1.3em;
+    }
+
+    .contact-btn button {
+        font-size: 1em;
+        padding: var(--spacing-unit) * 0.8 var(--spacing-unit);
+    }
+}
